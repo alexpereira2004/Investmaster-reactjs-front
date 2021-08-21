@@ -44,24 +44,6 @@ class MovimentosVenda extends React.Component {
 
 
     render() {
-
-        const rows = this.state.content.map(e => {
-            return(
-                <tr>
-                    <td>{e.id}</td>
-                    <td>{e.dataAquisicao}</td>
-                    <td>{e.precoPago}</td>
-                    <td>{e.quantidade}</td>
-                    <td>{e.totalInvestido}</td>
-                    <td>{e.dataVenda}</td>
-                    <td>{e.precoVenda}</td>
-                    <td>{e.totalFinal}</td>
-                    <td>{e.rendimento}</td>
-                    <td>{e.ativoNome}</td>
-                    <td>{e.ativoCodigo}</td>
-                </tr>)
-        });
-
         return(
             <>
                 Movimento vendas carregado
@@ -82,7 +64,24 @@ class MovimentosVenda extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {rows}
+                        {
+                            this.state.content.map(e => {
+                                return(
+                                    <tr>
+                                        <td>{e.id}</td>
+                                        <td>{e.dataAquisicao}</td>
+                                        <td>{e.precoPago}</td>
+                                        <td>{e.quantidade}</td>
+                                        <td>{e.totalInvestido}</td>
+                                        <td>{e.dataVenda}</td>
+                                        <td>{e.precoVenda}</td>
+                                        <td>{e.totalFinal}</td>
+                                        <td>{e.rendimento}</td>
+                                        <td>{e.ativoNome}</td>
+                                        <td>{e.ativoCodigo}</td>
+                                    </tr>)
+                                })
+                        }
                     </tbody>
                 </table>
             </>
