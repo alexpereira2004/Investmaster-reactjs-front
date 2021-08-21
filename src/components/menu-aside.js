@@ -15,6 +15,15 @@ class MenuAside extends React.Component {
                 </div>
                 <div className="aside-body" data-simplebar>
                     <div className="menu">
+                        <div className="menu-item">
+                            <a href="#/dashboard" className="menu-item-link">
+                                <div className="menu-item-icon">
+                                    <i className="fa fa-desktop"></i>
+                                </div>
+                                <span className="menu-item-text">Dashboard</span>
+                            </a>
+                        </div>
+
                         <div className="menu-section">
                             <div className="menu-section-icon">
                                 <i className="fa fa-ellipsis-h"></i>
